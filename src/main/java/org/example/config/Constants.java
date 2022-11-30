@@ -16,11 +16,16 @@ public interface Constants {
      * ANDROID properties ------------
      */
     String ANDROID_PLATFORM_VERSION = "11";
+//    String ANDROID_PLATFORM_VERSION = "5.1";
     String APP_PACKAGE = "io.appium.android.apis";
     String APP_ACTIVITY = ".ApiDemos";
+
+    String ANDROID_UDID ="emulator-5554";
+
+    //    String ANDROID_UDID = "42007f6cce6fc4f5";
     String ANDROID_DEVICE_NAME ="emulator-5554";
-    String AVD = "Pixel_2_API_30";
-    //String AVD = "S_9_plus_API_27";
+//    String AVD = "Pixel_2_API_30";
+    String AVD = "S_9_plus_API_27";
     String AUTOMATION_NAME = "UIAutomator2";
 
     /**

@@ -198,11 +198,11 @@ public class ViewTests {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-
         //Change Date Test
         AppiumTestSupport.buttonClick(DatePicker);
         String month = today.getMonth().name();
-        int newDay = today.getDayOfMonth() + 1;
+
+        int newDay = today.getDayOfMonth() - 7;
         String ContentDesc = newDay + " " + month.substring(0, 1) + month.substring(1).toLowerCase() + " " + today.getYear();
         String ContentDescFormatted = today.getMonthValue() + "/" + newDay + "/" + today.getYear();
         //Select Date

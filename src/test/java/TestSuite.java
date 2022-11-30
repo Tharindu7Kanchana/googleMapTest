@@ -4,6 +4,7 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.inivos.util.BaseTest;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.example.config.ConfigFactory;
 import org.example.config.Constants;
@@ -78,11 +79,12 @@ public class TestSuite extends BaseTest {
             // All Capability values are retrieved from Config.properties file.
             cap.setCapability(MobileCapabilityType.PLATFORM_NAME, constants.PLATFORM);
             cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, constants.ANDROID_PLATFORM_VERSION);
+            cap.setCapability(MobileCapabilityType.UDID, constants.ANDROID_UDID);
             cap.setCapability(MobileCapabilityType.DEVICE_NAME, constants.ANDROID_DEVICE_NAME);
-            cap.setCapability("avd", constants.AVD);
-            cap.setCapability("appActivity", constants.APP_ACTIVITY);
-            cap.setCapability("appPackage", constants.APP_PACKAGE);
-            cap.setCapability("autoLaunch", constants.AUTO_LAUNCH);
+            cap.setCapability(AndroidMobileCapabilityType.AVD, constants.AVD);
+            cap.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, constants.APP_ACTIVITY);
+            cap.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, constants.APP_PACKAGE);
+            cap.setCapability(AndroidMobileCapabilityType.AUTO_LAUNCH, constants.AUTO_LAUNCH);
             cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, constants.NEW_COMMAND_TIMEOUT);
             cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, constants.AUTOMATION_NAME);
 
