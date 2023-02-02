@@ -2,11 +2,8 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.inivos.util.BaseTest;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.IOSMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.example.config.ConfigFactory;
@@ -84,8 +81,8 @@ public class IosTestSuite extends BaseTest {
             cap.setCapability(MobileCapabilityType.PLATFORM_NAME, constants.PLATFORM);
             cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, constants.IOS_PLATFORM_VERSION);
             cap.setCapability(MobileCapabilityType.DEVICE_NAME, constants.IOS_DEVICE_NAME);
-            cap.setCapability(MobileCapabilityType.UDID,constants.IOS_UDID);
-            cap.setCapability(IOSMobileCapabilityType.BUNDLE_ID,constants.IOS_BUNDLE_ID);
+            cap.setCapability(MobileCapabilityType.UDID, constants.IOS_UDID);
+            cap.setCapability(IOSMobileCapabilityType.BUNDLE_ID, constants.IOS_BUNDLE_ID);
             cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, constants.NEW_COMMAND_TIMEOUT);
             cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, constants.IOS_AUTOMATION_NAME);
 
@@ -115,7 +112,6 @@ public class IosTestSuite extends BaseTest {
             log.info("Unable to launch the application :" + e.getMessage());
         }
     }
-
 
 
     @AfterClass

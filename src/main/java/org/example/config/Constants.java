@@ -24,8 +24,8 @@ public interface Constants {
 
     //    String ANDROID_UDID = "42007f6cce6fc4f5";
     String ANDROID_DEVICE_NAME ="emulator-5554";
-//    String AVD = "Pixel_2_API_30";
-    String AVD = "S_9_plus_API_27";
+ String AVD = "Pixel_2_API_30";
+    //String AVD = "S_9_plus_API_27";
     String AUTOMATION_NAME = "UIAutomator2";
 
     /**

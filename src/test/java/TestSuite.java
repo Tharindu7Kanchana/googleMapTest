@@ -15,6 +15,7 @@ import org.testng.log4testng.Logger;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
+
 public class TestSuite extends BaseTest {
 
     public static Logger log;
@@ -76,14 +77,14 @@ public class TestSuite extends BaseTest {
         Constants constants = ConfigFactory.getInstance();
         try {
             DesiredCapabilities cap = new DesiredCapabilities();
-            // All Capability values are retrieved from Config.properties file.
+            // All Capability values are retrieved from Config.Constants Interface file.
             cap.setCapability(MobileCapabilityType.PLATFORM_NAME, constants.PLATFORM);
             cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, constants.ANDROID_PLATFORM_VERSION);
             cap.setCapability(MobileCapabilityType.UDID, constants.ANDROID_UDID);
             cap.setCapability(MobileCapabilityType.DEVICE_NAME, constants.ANDROID_DEVICE_NAME);
             cap.setCapability(AndroidMobileCapabilityType.AVD, constants.AVD);
-            cap.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, constants.APP_ACTIVITY);
-            cap.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, constants.APP_PACKAGE);
+//            cap.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, constants.APP_ACTIVITY);
+//            cap.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, constants.APP_PACKAGE);
             cap.setCapability(AndroidMobileCapabilityType.AUTO_LAUNCH, constants.AUTO_LAUNCH);
             cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, constants.NEW_COMMAND_TIMEOUT);
             cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, constants.AUTOMATION_NAME);
@@ -115,10 +116,6 @@ public class TestSuite extends BaseTest {
         }
     }
 
-//    @Test
-//    public void testButton(){
-//        System.out.println(AppiumTestSupport.getCurrentActivity(driver));
-//    }
 
     @Test
     public void viewTests() throws InterruptedException {
@@ -202,8 +199,8 @@ public class TestSuite extends BaseTest {
         MapTest test = new MapTest(driver, "com.google.android.apps.maps");
         test.testMap();
         test.testExplore();
+        //test.ZoomInAndOut();
     }
-
 
     @AfterClass
     public void tearDown() {

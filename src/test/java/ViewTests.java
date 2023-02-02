@@ -43,11 +43,6 @@ public class ViewTests {
         this.driver = driver;
     }
 
-//    @BeforeMethod
-//    public void TestMethodStart(){
-//        System.out.println("A test Started");
-//    }
-
     @Test
     public void testAutoCompleteScreenTop() throws InterruptedException {
         //Opening autocomplete screentop activity
@@ -202,7 +197,7 @@ public class ViewTests {
         AppiumTestSupport.buttonClick(DatePicker);
         String month = today.getMonth().name();
 
-        int newDay = today.getDayOfMonth() - 7;
+        int newDay = today.getDayOfMonth() + 7;
         String ContentDesc = newDay + " " + month.substring(0, 1) + month.substring(1).toLowerCase() + " " + today.getYear();
         String ContentDescFormatted = today.getMonthValue() + "/" + newDay + "/" + today.getYear();
         //Select Date
