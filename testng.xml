@@ -6,7 +6,7 @@
         <classes>
             <class name="TestSuite">
                 <methods>
-                    <include name="appTests" />
+                    <include name="mapTests" />
                 </methods>
             </class> <!-- AndroidTestSuite -->
         </classes>
